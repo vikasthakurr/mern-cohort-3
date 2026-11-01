@@ -111,6 +111,40 @@
         </ul>
       </section>
 
+      <section class="panel advisor">
+        <div class="panel-head">
+          <h2>AI advisor</h2>
+          <span class="badge" id="aiStatus" data-state="off">● no key</span>
+        </div>
+        <div class="advisor-body">
+          <label class="field">
+            <span>Gemini API key</span>
+            <input
+              type="password"
+              id="aiKey"
+              placeholder="Paste your Gemini API key"
+              autocomplete="off"
+              spellcheck="false"
+            />
+          </label>
+          <button id="aiAskBtn" class="btn-ai" type="button">
+            Get AI suggestion
+          </button>
+          <p class="advisor-hint">
+            Reads the live watchlist and your portfolio, then asks Gemini for a
+            trading read. Simulation only — not financial advice.
+          </p>
+          <div
+            id="aiOutput"
+            class="advisor-output placeholder"
+            aria-live="polite"
+          >
+            Add your Gemini API key and tap “Get AI suggestion” for a read on
+            the current market.
+          </div>
+        </div>
+      </section>
+
       <section class="panel news">
         <div class="panel-head">
           <h2>News wire</h2>
@@ -124,5 +158,6 @@
       </section>
     </main>
     <script src="app.js"></script>
+    <script src="gemini.js"></script>
   </body>
 </html>
